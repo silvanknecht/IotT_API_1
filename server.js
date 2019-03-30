@@ -1,5 +1,7 @@
 const express = require('express');
 const devices = require('./routes/devices');
+const leds = require('./routes/leds');
+
 const app = express();
 const path = require('path');
 
@@ -19,6 +21,8 @@ app.get('/',function(req,res){
 
 // routes
 app.use('/devices', devices);
+app.use('/leds', leds);
+
 
 // add the router
 app.listen(process.env.port || 3000);
