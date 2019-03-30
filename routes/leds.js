@@ -1,6 +1,8 @@
 const express = require("express");
 //const router = require('express-promise-router');
 const router = express.Router();
+const pfio = require("piface");
+pfio.init();
 
 // import controllers
 const LedController = require("../controllers/LedController");
@@ -27,8 +29,7 @@ router.post("/leds/off/:id", (req, res, next) => {
     res.status(400).send("Invalid Id");
   }
 });
-const pfio = require("piface");
-pfio.init();
+
 
 function turnOn(id) {
   pfio.digital_write(id, 1);
