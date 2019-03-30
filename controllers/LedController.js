@@ -12,4 +12,4 @@ function turnOff(id) {
 }
 
 module.exports.turnOn = turnOn;
-module.exports.turnOn = turnOff;
+module.exports.turnOff = turnOff;
