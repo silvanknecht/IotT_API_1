@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 // import controllers
-const RelaisController = require("../controllers/RelaiController");
+const RelaisController = require("../controllers/RelaisController");
 
 router.get("/", (req, res, next) => {
   res.send("all states of the relais");
