@@ -11,7 +11,7 @@ router.get("/", (req, res, next) => {
 
 router.post("/on/:id", (req, res, next) => {
   let id = req.params.id;
-  if ((id >= 1) & (id < 2)) {
+  if ((id >= 0) & (id < 2)) {
     RelaisController.turnOn(id);
     res.send("Relais with Id: " + id + "turned on");
   } else {

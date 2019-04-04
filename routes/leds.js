@@ -11,7 +11,7 @@ router.get("/", (req, res, next) => {
 
 router.post("/on/:id", (req, res, next) => {
   let id = req.params.id;
-  if ((id >= 1) & (id < 8)) {
+  if ((id >= 2) & (id < 8)) {
     LedController.turnOn(id);
     res.send("Led with Id: " + id + "turned on");
   } else {
@@ -20,7 +20,7 @@ router.post("/on/:id", (req, res, next) => {
 });
 router.post("/off/:id", (req, res, next) => {
   let id = req.params.id;
-  if ((id >= 1) & (id < 8)) {
+  if ((id >= 2) & (id < 8)) {
     LedController.turnOff(id);
     res.send("Led with Id: " + id + "turned off");
   } else {
