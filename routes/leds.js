@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pfio = require("piface");
-pfio.init();
+
 
 // import controllers
 const LedController = require("../controllers/LedController");
