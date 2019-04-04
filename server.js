@@ -1,7 +1,7 @@
 const express = require('express');
 const devices = require('./routes/devices');
 const leds = require('./routes/leds');
-const leds = require('./routes/relais');
+const relais = require('./routes/relais');
 
 
 const app = express();
